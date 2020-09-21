@@ -3,6 +3,7 @@
 python3 -m venv venv;
 . venv/bin/activate;
 pip3 install -r requirements.txt;
+deactivate;
 
 if [ -d "$HOME/.local/bin" ]; then
 	EXE_PATH=$HOME/.local/bin
