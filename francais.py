@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import urllib.request, re, io
+import urllib.request, re
 from gtts import gTTS
 from bs4 import BeautifulSoup
 from pydub import AudioSegment
