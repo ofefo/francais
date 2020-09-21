@@ -1,6 +1,6 @@
 # français
 
-Intended to help me learn the language, this script gets the text from a random wikipedia article, prints it and reads it with French pronounciation.
+Intended to help me learn the language, this script gets the text from a random wikipedia article, prints it and reads it with French pronunciation.
 
 ### Installation
 
