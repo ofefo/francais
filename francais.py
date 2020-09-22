@@ -3,9 +3,7 @@
 import urllib.request, re
 from gtts import gTTS
 from bs4 import BeautifulSoup
-from pydub import AudioSegment
-from pydub.playback import play
-
+from playsound import playsound
 
 url = 'https://fr.wikipedia.org/wiki/Sp%C3%A9cial:Page_au_hasard'
 html = urllib.request.urlopen(url).read().decode('utf-8')
@@ -18,7 +16,7 @@ text = str()
 print('\nVoici un article au hasard:\n')
 print(title.get_text())
 if intro.find('div', {'class':"bandeau-cell"}) is not None:
-    for el in intro.find_all('p')[1:]:
+    for el in intro.find_all('p')[2:-1]:
         text = text + el.get_text()
 else:
     for el in intro.find_all('p'):
@@ -28,5 +26,4 @@ print(text)
 tts = gTTS(text, lang='fr')
 tts.save('wiki.mp3')
 mp3 = 'wiki.mp3'
-sound = AudioSegment.from_mp3(mp3)
-play(sound)
+playsound(mp3)
